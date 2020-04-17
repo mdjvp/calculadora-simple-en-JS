@@ -1,0 +1,56 @@
+body{
+
+    padding: 0;
+    margin: 0;
+    background:  linear-gradient(to right, pink, orange );
+}
+
+.calculadora-grilla{
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    /* min-height: auto; */
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5,100px);
+
+}
+
+.calculadora-grilla > button{
+
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+    
+}
+
+.calculadora-grilla > button:hover {
+
+    background-color: coral;
+}
+
+.output{
+
+    grid-column: 1/-1;
+    background-color: rgba(0,0,0,.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .display{
+
+    color: black;
+    font-size: 1.85rem;
+    text-align: right;
+}
+/*OBS: rem in font sizing and spacing (margin, padding, etc.). 
+And use em for layouts like menu. */
+
+/* Padding es el espacio que hay en un contenedor entre el contenido y los bordes del contenedor. */
